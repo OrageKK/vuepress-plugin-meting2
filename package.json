@@ -1,7 +1,7 @@
 {
   "name": "vuepress-plugin-meting2",
   "description": "Wow, such a beautiful html5 music player (with Meting API) support vuepress next",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "type": "module",
   "scripts": {
