@@ -13,12 +13,13 @@ declare const metingPluginOptions: MetingPluginsOptions;
 export default defineComponent({
   setup() {
     if (
-      (metingPluginOptions.additionalAudios &&
+      // 如果全局设置为true，且附加音频列表不为空，或者metingOptions.mid存在，或者metingOptions.list不为空
+      metingPluginOptions.metingOptions?.global === true &&
+      ((metingPluginOptions.additionalAudios &&
         metingPluginOptions.additionalAudios.length > 0) ||
-      metingPluginOptions.metingOptions?.mid ||
-      (metingPluginOptions.metingOptions?.list &&
-        metingPluginOptions.metingOptions.list.length > 0 &&
-        metingPluginOptions.metingOptions.global)
+        metingPluginOptions.metingOptions?.mid ||
+        (metingPluginOptions.metingOptions?.list &&
+          metingPluginOptions.metingOptions.list.length > 0))
     ) {
       const src = {
         ...metingPluginOptions.metingOptions,
