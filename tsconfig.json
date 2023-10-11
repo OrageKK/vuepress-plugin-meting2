@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM"],
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports":true,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "declaration": true,
+  },
+  "include": ["./src/**/*", "src/utils/module-shim.d.ts"],
+  "exclude": ["node_modules"]
+}

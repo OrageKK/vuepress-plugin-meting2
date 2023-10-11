@@ -1,0 +1,42 @@
+{
+  "name": "vuepress-plugin-meting2",
+  "description": "Wow, such a beautiful html5 music player (with Meting API) support vuepress next",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrageKK/vuepress-plugin-music.git"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "vuepress-plugin",
+    "player",
+    "music",
+    "api",
+    "meting"
+  ],
+  "dependencies": {
+    "aplayer": "^1.10.1",
+    "deepmerge-ts": "^5.1.0",
+    "hls.js": "^1.4.3"
+  },
+  "devDependencies": {
+    "vue": "^3.3.4",
+    "@vuepress/client": "2.0.0-beta.67",
+    "@vuepress/core": "2.0.0-beta.67",
+    "@vuepress/utils": "2.0.0-beta.67",
+    "typescript": "^5.0.2",
+    "execa": "^7.1.1",
+    "gulp": "^4.0.2",
+    "gulp-json-editor": "^2.5.6",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "rimraf": "^5.0.0"
+  }
+}
