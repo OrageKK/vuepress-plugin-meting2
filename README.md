@@ -13,9 +13,9 @@
 ## Install
 
 ```bash
-npm i vuepress-plugin-meting -D
+npm i vuepress-plugin-meting2 -D
 # or use pnpm
-pnpm add vuepress-plugin-meting -D
+pnpm add vuepress-plugin-meting2 -D
 ```
 
 ## Usage
