@@ -1,5 +1,5 @@
 import { Audio } from "aplayer/dist/APlayer.min.js";
-import { MetingOptions, APlayerComponentsOptions } from "../type.js";
+import { MetingOptions, APlayerComponentsOptions } from "../export.js";
 
 export const GetAudioList = async (
   meting: MetingOptions & APlayerComponentsOptions
@@ -18,9 +18,9 @@ export const GetAudioList = async (
   }
 
   //判断id或auto是否存在，如果存在就将其添加到list中
-  if (meting.id || meting.auto) {
+  if (meting.mid || meting.auto) {
     list.unshift({
-      id: meting.id,
+      mid: meting.mid,
       server: meting.server,
       type: meting.type,
       auth: meting.auth,
@@ -32,10 +32,10 @@ export const GetAudioList = async (
   if (list && list.length > 0) {
     list.map((e) => {
       //判断id或auto是否存在，如果存在就将其添加到urlList中
-      if (e.id || e.auto) {
+      if (e.mid || e.auto) {
         let a = ParseMeting(
           {
-            id: e.id,
+            mid: e.mid,
             server: e.server || meting.server,
             type: e.type || meting.type,
             auth: e.auth || meting.auth,
@@ -82,11 +82,11 @@ const ParseMeting = (
   if (m && m.auto) {
     m = ParseLink(m.auto);
   }
-  if (m && m.server && m.type && m.id && m.auth) {
+  if (m && m.server && m.type && m.mid && m.auth) {
     let url = api
       .replace(":server", m.server)
       .replace(":type", m.type)
-      .replace(":id", m.id)
+      .replace(":id", m.mid)
       .replace(":auth", m.auth);
     // .replace(":r", Math.random().toString());
 

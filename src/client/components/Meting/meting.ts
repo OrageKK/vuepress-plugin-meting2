@@ -9,7 +9,7 @@ import {
 import { GetAudioList } from "../../../utils/meting.js";
 
 import type { VNode } from "vue";
-import type { APlayerComponentsOptions, MetingOptions } from "../../../type.js";
+import type { APlayerComponentsOptions, MetingOptions } from "../../../export.js";
 import type { APlayerOptions } from "aplayer/dist/APlayer.min.js";
 
 export default defineComponent({

@@ -32,10 +32,10 @@ const cpPackageJson = () => {
   return src("package.json")
     .pipe(
       jeditor({
-        version: version,
+        version: version
       })
     )
-    .pipe(src("readme.md"))
+    .pipe(src("README.md"))
     .pipe(src("LICENSE"))
     .pipe(dest(outputDir));
 };
