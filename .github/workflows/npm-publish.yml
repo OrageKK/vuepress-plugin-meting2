@@ -11,22 +11,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-       - name: Checkout
+      - name: Checkout
         uses: actions/checkout@v3
-        
+
       - name: Install pnpm
         uses: pnpm/action-setup@v2
 
       - name: 设置 Node.js
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'pnpm'
+          cache: "pnpm"
       - name: 安装依赖
         run: pnpm install --frozen-lockfile
       - name: 编译
         run: pnpm build
-      
 
   publish-npm:
     needs: build
@@ -36,7 +35,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'pnpm'
+          cache: "pnpm"
           registry-url: https://registry.npmjs.org/
       - run: pnpm install --frozen-lockfile
       - run: npm publish
