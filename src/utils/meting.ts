@@ -81,12 +81,12 @@ const ParseMeting = (
 ): string | undefined => {
   if (m && m.auto) {
     m = ParseLink(m.auto);
-    if (m.server && m.type && m.mid && m.auth) {
+    if (m.server && m.type && m.mid) {
       let url = api
         .replace(":server", m.server)
         .replace(":type", m.type)
         .replace(":id", m.mid)
-        .replace(":auth", m.auth);
+        .replace(":auth", m.auth ?? 'auth');
       return url;
     }
     return "";
