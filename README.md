@@ -1,4 +1,4 @@
-# vuepress-plugin-music
+# vuepress-plugin-Meting2
 
 :cake: A simple plugin Support vuepress2.x based on Aplayer+Meting
 
