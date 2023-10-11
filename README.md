@@ -94,10 +94,14 @@ Options 分为 `aplayerOptions`、`metingOptions`、`additionalAudios` 三部分
    -  默认值：`[]`
    -  描述：除 Meting 解析的 audio 外额外添加的 audio
 
-### Examples
+## Examples
 
 ```html
 <Meting id="6838211960" server="netease" type="playlist" />
 <!-- 这样就可以在页面单独引入一个播放器咯～ -->
 ```
+## Thanks
 
+-  [APlayer](https://github.com/DIYgod/APlayer)
+-  [Meting](https://github.com/metowolf/Meting)
+-  [MetingJS](https://github.com/metowolf/MetingJS)
