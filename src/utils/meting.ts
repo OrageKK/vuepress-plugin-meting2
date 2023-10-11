@@ -81,6 +81,15 @@ const ParseMeting = (
 ): string | undefined => {
   if (m && m.auto) {
     m = ParseLink(m.auto);
+    if (m.server && m.type && m.mid && m.auth) {
+      let url = api
+        .replace(":server", m.server)
+        .replace(":type", m.type)
+        .replace(":id", m.mid)
+        .replace(":auth", m.auth);
+      return url;
+    }
+    return "";
   }
   if (m && m.server && m.type && m.mid && m.auth) {
     let url = api
@@ -121,7 +130,7 @@ const ParseLink = (auto: string): Record<string, any> => {
       return {
         server: rule[1],
         type: rule[2],
-        id: result[1],
+        mid: result[1],
       };
     }
   }

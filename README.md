@@ -97,9 +97,20 @@ Options 分为 `aplayerOptions`、`metingOptions`、`additionalAudios` 三部分
 ## Examples
 
 ```html
-<Meting id="6838211960" server="netease" type="playlist" />
+<Meting mid="003UTVCN0QvffG" server="tencent" type="song" api="https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r"/>
 <!-- 这样就可以在页面单独引入一个播放器咯～ -->
 ```
+
+或者像这样
+```html
+<Meting auto="https://y.qq.com/n/ryqq/songDetail/003UTVCN0QvffG" api="https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&auth=:auth&r=:r"/>
+<!-- 使用网站链接就可以解析成功并引入一个播放器咯~ -->
+```
+- QQ音乐的mid不是数字
+  - https://y.qq.com/n/ryqq/songDetail/003UTVCN0QvffG
+- 网易云
+  - https://music.163.com/#/playlist?id=60198
+
 ## Thanks
 
 -  [APlayer](https://github.com/DIYgod/APlayer)

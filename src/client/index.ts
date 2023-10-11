@@ -5,7 +5,7 @@ import APlayer from "./components/APlayer/index.js";
 
 export default defineClientConfig({
   async enhance({ app }) {
-    app.component("Aplayer", APlayer);
+    app.component("APlayer", APlayer);
     app.component("Meting", Meting);
   },
   rootComponents: [MetingGlobal],

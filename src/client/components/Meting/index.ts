@@ -9,7 +9,7 @@ declare const metingPluginOptions: MetingPluginsOptions;
 
 export default defineComponent({
   props: {
-    id: {
+    mid: {
       type: String,
       default: "",
     },
