@@ -8,8 +8,8 @@ import type {
   MetingPluginsOptions,
 } from "../../../export.js";
 
-declare const metingPluginOptions: MetingPluginsOptions;
-
+declare const METING_PLUGIN_OPTIONS: MetingPluginsOptions;
+const metingPluginOptions = METING_PLUGIN_OPTIONS;
 export default defineComponent({
   setup() {
     if (

@@ -5,7 +5,8 @@ import type { VNode } from "vue";
 import type { APlayerComponentsOptions, MetingOptions, MetingPluginsOptions } from "../../../export.js";
 import type { APlayerOptions } from "aplayer/dist/APlayer.min.js";
 
-declare const metingPluginOptions: MetingPluginsOptions;
+declare const METING_PLUGIN_OPTIONS: MetingPluginsOptions;
+const metingPluginOptions = METING_PLUGIN_OPTIONS;
 
 export default defineComponent({
   props: {
