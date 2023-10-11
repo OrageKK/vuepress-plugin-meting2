@@ -87,7 +87,7 @@ export default defineComponent({
       type: Object as PropType<
         (player: any, src: APlayerOptions) => Promise<any>
       >,
-      default: () => metingPluginOptions.aplayerOptions?.customAudioType,
+      default: () => metingPluginOptions.aplayerOptions?.customInit,
     },
   },
   setup(props) {
