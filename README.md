@@ -13,6 +13,9 @@
 ## Install
 
 ```bash
+# use yarn
+yarn add vuepress-plugin-meting2 -D
+# or use npm
 npm i vuepress-plugin-meting2 -D
 # or use pnpm
 pnpm add vuepress-plugin-meting2 -D
