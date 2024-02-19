@@ -1,8 +1,8 @@
-import { getDirname, path } from "@vuepress/utils";
+import { getDirname, path } from "vuepress/utils";
 import { deepmerge } from "deepmerge-ts";
 import { MetingPluginsOptionsDefault } from "./export.js";
 
-import type { PluginFunction} from "@vuepress/core";
+import type { PluginFunction} from "vuepress/core";
 import type { MetingPluginsOptions } from "./export.js";
 
 const __dirname = getDirname(import.meta.url);
