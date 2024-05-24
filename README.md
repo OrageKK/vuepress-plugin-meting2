@@ -74,7 +74,7 @@ Options 分为 `aplayerOptions`、`metingOptions`、`additionalAudios` 三部分
 | listFolded      | false                              | 列表默认折叠                                                 |
 | listMaxHeight   | -                                  | 列表最大高度                                                 |
 | storageName     | 'aplayer-setting'                  | 存储播放器设置的 localStorage key                            |
-
+| lrcDisplay      | 'hide'                             | 是否默认显示歌词                                              |
 ### metingOptions
 
 | 名称           | 默认值                                                       | 描述                                                         |
