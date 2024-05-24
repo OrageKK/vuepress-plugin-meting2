@@ -19,7 +19,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const src: MetingOptions & APlayerOptions = {
+    const src: MetingOptions & APlayerOptions & APlayerComponentsOptions = {
       ...props.src,
     } as MetingOptions & APlayerComponentsOptions;
     const el = ref<HTMLDivElement>();
@@ -36,6 +36,20 @@ export default defineComponent({
         src.container = el.value;
         src.audio = audios;
         player = new APlayer(src);
+        switch (src.lrcDisplay) {
+          case "show":
+            player.lrc.show();
+            break;
+          case "hide":
+            player.lrc.hide();
+            break;
+          case "toggle":
+            player.lrc.toggle();
+            break;
+          default:
+            player.lrc.show();
+            break;
+        }
       });
     });
 

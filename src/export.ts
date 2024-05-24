@@ -1,11 +1,17 @@
 import type { APlayerOptions, Audio } from "aplayer/dist/APlayer.min.js";
 
 export interface APlayerComponentsOptions
-  extends Omit<APlayerOptions, "container"> {}
+  extends Omit<APlayerOptions, "container"> {
+  /**
+   * 是否默认显示歌词
+   */
+  lrcDisplay?: lrcDisplay
+}
 
 export type MusicPlatform = ResourcesPlatform | "kugou" | "baidu";
 export type ResourcesPlatform = "netease" | "tencent" | "xiami";
 export type MetingApiType = "song" | "playlist" | "album" | "search" | "artist";
+export type lrcDisplay = "show" | "hide" | "toggle";
 export interface MetingOptions {
   /**
    * 是否启用全局播放器
@@ -72,10 +78,11 @@ export const MetingPluginsOptionsDefault: MetingPluginsOptions = {
     listFolded: false,
     listMaxHeight: "340px",
     storageName: "vuepress-plugin-meting2",
+    lrcDisplay: "hide"
   },
   additionalAudios: [],
   metingOptions: {
-    global:false,
+    global: false,
     server: "netease",
     type: "song",
     auth: "auth",
